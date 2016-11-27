@@ -6,7 +6,7 @@ import React, {
 class Contact extends Component {
   render() {
     return (
-      <div>Hi from contact!</div>
+      <h3>This is Contact.js!</h3>
     );
   }
 }

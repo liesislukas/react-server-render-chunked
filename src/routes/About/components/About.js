@@ -6,7 +6,7 @@ import React, {
 class About extends Component {
   render() {
     return (
-      <div>Hi from about!</div>
+      <h3>This is About.js!</h3>
     );
   }
 }

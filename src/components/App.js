@@ -8,11 +8,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h2>Hi from index!</h2>
-        <Link to={'about'}>About</Link>  |
+        <h2>This is App.js!</h2>
+        <Link to={'/'}>Home</Link>
+        {' '}
+        <Link to={'about'}>About</Link>
+        {' '}
         <Link to={'contact'}>Contact</Link>
         <div>
-          {this.props.children || 'no child'}
+          {this.props.children || <h3>No child, looking at home</h3>}
         </div>
       </div>
     );
