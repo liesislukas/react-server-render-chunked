@@ -9,7 +9,7 @@ module.exports = {
 
   output: {
     path: __dirname + '/public/build',
-    filename: 'app.js',
+    filename: 'shared.js',
     chunkFilename: '[id].chunk.js',
     publicPath: '/build/',
   },
@@ -23,9 +23,17 @@ module.exports = {
 
   resolve: {
     alias: {
-      'react-router': path.join(__dirname, '..', 'modules'),
+      // 'react-router': path.join(__dirname, '..', 'modules'),
     }
   },
+
+  plugins: [
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    // new webpack.optimize.CommonsChunkPlugin('shared.js'),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+    })
+  ],
 
   context: __dirname,
   node: {

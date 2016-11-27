@@ -16,7 +16,6 @@ app.use(webpackDevMiddleware(webpack(WebpackConfig), {
   }
 }));
 
-
 app.use(rewrite('/*', '/public/index.html'));
 
 app.use(express.static(__dirname));
@@ -27,6 +26,6 @@ app.listen(port, 'localhost', (err) => {
     console.log(err);
   } else {
     console.log(`Listening at http://localhost:${port}`);
-    open(`http://localhost:${port}`);
+    // open(`http://localhost:${port}`);
   }
 });
